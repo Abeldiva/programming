@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <time.h>
 /**
  * main - Entry point
  * Description: prints alphabet in lowercase then uppercase
- * betty style doc for function main goes there
  * Return: Always 0 (Success)
  */
 int main(void)
 {
 	int ch;
 
-	for (ch = 'a'; ch < = 'z'; ch++)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
 	}
-	for (ch = 'A'; ch < = 'Z'; ch++)
+	for (ch = 'A'; ch <= 'Z'; ch++)
 	{
 		putchar(ch);
 	}
