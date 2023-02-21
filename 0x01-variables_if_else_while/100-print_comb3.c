@@ -7,17 +7,18 @@
  */
 int main(void)
 {
-	int d, p;
+	int d = '0';
+	int p = '0';
 
-	for (d = '0'; d <= '9'; d++)
+	for (p = '0'; p <= '9'; p++)/* prints tens digit*/
 	{
-		for (p = '0'; p <= '9'; p++)
+		for (d = '0'; d <= '9'; d++)/* prints ones digit*/
 		{
-			if (p < d)
+			if (d > p)/* eliminates repetition*/
 			{
-				putchar(d);
 				putchar(p);
-				if (d != '8' || (d == '8' && p != '9'))
+				putchar(d);
+				if (d != '9' && p == '8')/* adds comma and space*/
 				{
 				putchar(',');
 				putchar(' ');
