@@ -10,15 +10,15 @@ int main(void)
 	int d = '0';
 	int p = '0';
 
-	for (p = '0'; p <= '9'; p++)/* prints tens digit*/
+	for (d = '0'; d <= '9'; d++)/* prints ones digit*/
 	{
-		for (d = '0'; d <= '9'; d++)/* prints ones digit*/
+		for (p = '0'; p <= '9'; p++)/* prints tens digit*/
 		{
-			if (d > p)/* eliminates repetition*/
+			if (p > d)/* eliminates repetition*/
 			{
 				putchar(p);
 				putchar(d);
-				if (d != '9' && p == '8')/* adds comma and space*/
+				if (p != '8' && d == '9')/* adds comma and space*/
 				{
 				putchar(',');
 				putchar(' ');
