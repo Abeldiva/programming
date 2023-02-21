@@ -17,10 +17,11 @@ int main(void)
 			{
 				putchar(d);
 				putchar(p);
-				if (d != '8'|| (d == '8' && p != '9'))
-					continue;
+				if (d != '8' || (d == '8' && p != '9'))
+				{
 				putchar(',');
 				putchar(' ');
+				}
 			}
 		}
 	}
