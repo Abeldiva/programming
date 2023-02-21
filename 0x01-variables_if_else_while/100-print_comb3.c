@@ -16,8 +16,8 @@ int main(void)
 		{
 			if (d < p)/* eliminates repetition*/
 			{
-				putchar(p);
 				putchar(d);
+				putchar(p);
 				if (d != '8' || (p != '8' && d == '9'))/* adds comma and space*/
 				{
 				putchar(',');
