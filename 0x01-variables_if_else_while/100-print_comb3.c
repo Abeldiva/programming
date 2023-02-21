@@ -14,11 +14,11 @@ int main(void)
 	{
 		for (p = '0'; p <= '9'; p++)/* prints tens digit*/
 		{
-			if (p > d)/* eliminates repetition*/
+			if (d < p)/* eliminates repetition*/
 			{
 				putchar(p);
 				putchar(d);
-				if (p != '8' && d == '9')/* adds comma and space*/
+				if (d != '8' || (p != '8' && d == '9'))/* adds comma and space*/
 				{
 				putchar(',');
 				putchar(' ');
