@@ -7,26 +7,26 @@
 int main(void)
 {
 	long int n;
-	long int max;
+	long int maxf;
 	long int x;
 
 	n = 612852475143;
-	max = -1;
+	maxf = -1;
 	while (n % 2 == 0)
 	{
-		max = 2;
+		maxf = 2;
 		n /= 2;
 	}
 	for (x = 3; x <= sqrt(n); x = x + 2)
 	{
 		while (n % x == 0)
 		{
-			max = x;
+			maxf = x;
 			n = n / x;
 		}
 	}
 	if (x > 2)
-		max = x;
-	printf("%ld\n", max);
+		maxf = x;
+	printf("%ld\n", maxf);
 	return (0);
 }
