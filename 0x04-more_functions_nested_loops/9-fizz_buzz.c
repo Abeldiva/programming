@@ -23,13 +23,13 @@ int main(void)
 		} else if (i % 3 == 0 && i % 5 == 0)
 		{
 			printf("FizzBuzz");
-		} else 
-		{
-			printf("%d", i);
-		}
-		if (i != 100)
+		} if (i != 100) 
 		{
 			printf(" ");
+		}
+		else
+		{
+			printf("%d", i);
 		}
 	}
 		printf("\n");
