@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "lists.h"
 
 /**
@@ -7,6 +6,7 @@
  *
  * Return: umber of nodes
  */
+
 size_t print_listint(const listint_t *h)
 {
 	size_t num = 0;
