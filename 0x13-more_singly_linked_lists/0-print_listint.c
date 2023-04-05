@@ -4,11 +4,9 @@
  * print listint_t - prints all the elements of linked list
  * @h: linked list of listint_t to print
  * main - check the code
- * Description: function that prints all the elements of a listint_t list
  *
  * Return: umber of nodes
  */
-
 size_t print_listint(const listint_t *h)
 {
 	size_t num = 0;
