@@ -1,9 +1,9 @@
-#include <sys/types.h>
-#include <fcntl.h>
 #include <elf.h>
-#include <stdio.h>
+#include <sys/types.h>
 #include <sys/stat.h>
+#include <fcntl.h>
 #include <unistd.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 void check_elf(unsigned char *e_ident);
@@ -19,7 +19,7 @@ void close_elf(int elf);
 
 /**
  * check_elf - Checks if a file is an ELF file.
- * @e_ident: A pointer to an array containing the ELF magic numbers.
+ * @e_ident: A pointer to an array that contains the ELF magic numbers.
  *
  * Description: If the file is not an ELF file or an error - exit code 98.
  */
@@ -39,9 +39,10 @@ void check_elf(unsigned char *e_ident)
 		}
 	}
 }
+
 /**
  * print_magic - Prints the magic numbers of an ELF header.
- * @e_ident: A pointer to an array containing the ELF magic numbers.
+ * @e_ident: A pointer to an array that contains the ELF magic numbers.
  *
  * Description: Magic numbers are separated by spaces.
  */
@@ -53,16 +54,16 @@ void print_magic(unsigned char *e_ident)
 	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", e_ident[index]);
-
 		if (index == EI_NIDENT - 1)
 			printf("\n");
 		else
 			printf(" ");
 	}
 }
+
 /**
  * print_class - Prints the class of an ELF header.
- * @e_ident: A pointer to an array containing the ELF class.
+ * @e_ident: A pointer to an array that contains the ELF class.
  */
 void print_class(unsigned char *e_ident)
 {
@@ -83,9 +84,10 @@ void print_class(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
+
 /**
  * print_data - Prints the data of an ELF header.
- * @e_ident: A pointer to an array containing the ELF class.
+ * @e_ident: A pointer to an array that contains the ELF class.
  */
 void print_data(unsigned char *e_ident)
 {
@@ -106,9 +108,10 @@ void print_data(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
+
 /**
  * print_version - Prints the version of an ELF header.
- * @e_ident: A pointer to an array containing the ELF version.
+ * @e_ident: A pointer to an array that contains the ELF version.
  */
 void print_version(unsigned char *e_ident)
 {
@@ -125,9 +128,10 @@ void print_version(unsigned char *e_ident)
 		break;
 	}
 }
+
 /**
  * print_osabi - Prints the OS/ABI of an ELF header.
- * @e_ident: A pointer to an array containing the ELF version.
+ * @e_ident: A pointer to an array that contains the ELF version.
  */
 void print_osabi(unsigned char *e_ident)
 {
@@ -169,19 +173,21 @@ void print_osabi(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }
+
 /**
  * print_abi - Prints the ABI version of an ELF header.
- * @e_ident: A pointer to an array containing the ELF ABI version.
+ * @e_ident: A pointer to an array that contains the ELF ABI version.
  */
 void print_abi(unsigned char *e_ident)
 {
 	printf("  ABI Version:                       %d\n",
 	       e_ident[EI_ABIVERSION]);
 }
+
 /**
  * print_type - Prints the type of an ELF header.
  * @e_type: The ELF type.
- * @e_ident: A pointer to an array containing the ELF class.
+ * @e_ident: A pointer to an array that contains the ELF class.
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
